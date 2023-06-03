@@ -5,7 +5,6 @@ import torch.nn as nn
 def GetCorrectPredCount(pPrediction, pLabels):
     return pPrediction.argmax(dim=1).eq(pLabels).sum().item()
 
-
 def train(model, device, train_loader, optimizer, criterion, train_acc, train_losses):
     model.train()
     pbar = tqdm(train_loader)
