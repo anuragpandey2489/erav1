@@ -42,4 +42,4 @@ class Net2(nn.Module):
         x = x.view(-1, 4096) # 4*4*256 = 4096
         x = F.relu(self.fc1(x))
         x = self.fc2(x)
-        return F.log_softmax(x, dim=1)
+        return F.log_softmax(x, dim=1) 
